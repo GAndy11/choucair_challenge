@@ -1,6 +1,8 @@
 package co.com.choucair.certification.proyectoreto.tasks;
 
 import co.com.choucair.certification.proyectoreto.userinterface.AddressPage;
+import co.com.choucair.certification.proyectoreto.userinterface.CompletePage;
+import co.com.choucair.certification.proyectoreto.userinterface.DevicesPage;
 import co.com.choucair.certification.proyectoreto.userinterface.PersonalPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -21,7 +23,7 @@ public class Create implements Task {
         actor.attemptsTo(
                 Enter.theValue("test").into(PersonalPage.INPUT_FIRST_NAME),
                 Enter.theValue("test").into(PersonalPage.INPUT_LAST_NAME),
-                Enter.theValue("cliente@gmail.com").into(PersonalPage.INPUT_EMAIL),
+                Enter.theValue("cliente1@gmail.com").into(PersonalPage.INPUT_EMAIL),
                 SelectFromOptions.byVisibleText("May").from(PersonalPage.INPUT_BIRTH_MONTH),
                 SelectFromOptions.byVisibleText("15").from(PersonalPage.INPUT_BIRTH_DAY),
                 SelectFromOptions.byVisibleText("1991").from(PersonalPage.INPUT_BIRTH_YEAR),
@@ -30,6 +32,12 @@ public class Create implements Task {
                 Hit.the(Keys.ARROW_DOWN).into(AddressPage.INPUT_CITY),
                 Hit.the(Keys.ENTER).into(AddressPage.INPUT_CITY),
                 Enter.theValue("5002").into(AddressPage.INPUT_ZIP),
-                Click.on(AddressPage.BUTTON_NEXT_DEVICES));
+                Click.on(AddressPage.BUTTON_NEXT_DEVICES),
+                Click.on(DevicesPage.BUTTON_LAST_STEP),
+                Enter.theValue("Thisisatextpassword123/*-+").into(CompletePage.INPUT_PASSWORD),
+                Enter.theValue("Thisisatextpassword123/*-+").into(CompletePage.INPUT_CONFIRM_PASSWORD),
+                Click.on(CompletePage.CHECK_TERMS_USE),
+                Click.on(CompletePage.CHECK_SECURITY_POLICY),
+                Click.on(CompletePage.BUTTON_COMPLETE_SETUP));
     }
 }
