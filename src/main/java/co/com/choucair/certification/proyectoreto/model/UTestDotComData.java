@@ -1,12 +1,27 @@
 package co.com.choucair.certification.proyectoreto.model;
 
 public class UTestDotComData {
+    private String welcomeMessage;
     private String firsName;
     private String lastName;
     private String emailAddress;
     private String birthMonth;
     private String birthDay;
-    private String bitrthYear;
+    private String birthYear;
+    private String city;
+    private String zipCode;
+    private String device;
+    private String deviceVersion;
+    private String deviceLanguage;
+    private String password;
+
+    public String getWelcomeMessage() {
+        return welcomeMessage;
+    }
+
+    public void setWelcomeMessage(String welcomeMessage) {
+        this.welcomeMessage = welcomeMessage;
+    }
 
     public String getFirsName() {
         return firsName;
@@ -48,12 +63,59 @@ public class UTestDotComData {
         this.birthDay = birthDay;
     }
 
-    public String getBitrthYear() {
-        return bitrthYear;
+    public String getBirthYear() {
+        return birthYear;
     }
 
-    public void setBitrthYear(String bitrthYear) {
-        this.bitrthYear = bitrthYear;
+    public void setBirthYear(String birthYear) {
+        this.birthYear = birthYear;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public String getDevice() {
+        return device;
+    }
+
+    public void setDevice(String device) {
+        this.device = device;
+    }
+
+    public String getDeviceVersion() {
+        return deviceVersion;
+    }
+
+    public void setDeviceVersion(String deviceVersion) {
+        this.deviceVersion = deviceVersion;
+    }
+
+    public String getDeviceLanguage() {
+        return deviceLanguage;
+    }
+
+    public void setDeviceLanguage(String deviceLanguage) {
+        this.deviceLanguage = deviceLanguage;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
